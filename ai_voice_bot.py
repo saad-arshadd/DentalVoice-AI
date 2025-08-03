@@ -5,9 +5,9 @@ from openai import OpenAI
 
 class VOICEBOT:
     def __init__(self):
-        aai.settings.api_key = "9771bdd563404efb8e4ac80a85ce4be1"
-        self.openai_client = OpenAI(api_key="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")
-        self.elevenlabs_api_key ="sk_4eaf51fd43227d8088ab560774f92dd0f36b8c28d97f7f36"
+        aai.settings.api_key = "YOUR ASSEMBLY AI API KEY"
+        self.openai_client = OpenAI(api_key="YOUR OPEN AI API KEY")
+        self.elevenlabs_api_key ="YOUR ELEVEN LABS API KEY "
 
         self.transcriber= None
         # prompt for the intitialization
@@ -117,11 +117,12 @@ class VOICEBOT:
         stream(audio_stream)
 
 
-start_greeting = "Thank You for callings us , how may I assist you "
+start_greeting = "Thank You for callings Saad Dental Clinic , how may I assist you "
 
 ai_ASS = VOICEBOT()
 ai_ASS.generate_audio(start_greeting)
 ai_ASS.start_transcription()
+
 
 
 
